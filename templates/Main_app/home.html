@@ -1,0 +1,15 @@
+{% extends 'core/base.html' %}
+{% block title %}Home{% endblock title %}
+{% block content %} 
+<hr style="border:solid">
+
+<hr style="color:black">
+<center>
+<a href="{% url 'encrypt' %}">
+<button  class="btn btn-primary">Cipher</button>
+</a>
+<a href="{% url 'decrypt' %}">
+    <button  class="btn btn-danger">De-Cipher</button>
+    </a>
+</center>
+{% endblock content %}

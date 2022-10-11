@@ -1,0 +1,13 @@
+{% extends 'core/base.html' %}
+{% block title %}Final Answer{% endblock title %}
+{% block content %} 
+<hr style="border:solid">
+
+<hr style="color:black">
+<center>
+<h7>The Generated Plain_Text is: {{answer}}</h7>
+</center>
+<a href="{% url 'delete-all' %}">
+    <button  class="btn btn-danger">OK</button>
+    </a>
+{% endblock content %}

@@ -1,0 +1,21 @@
+{% extends 'core/base.html' %}
+{% block title %} Encrypt {% endblock title %}
+{% block content %} 
+<hr style="color:black">
+<h5 style="text-align:center">Cipher Encrypt</h5>
+<form method="POST">
+  {% csrf_token %}
+    <div class="form-group">
+      <label for="plaitext">Plain Text</label>
+      <input type="text" class="form-control" id="plaintext" name="plaintext" >
+      <br>
+    <a href="{% url 'submit' %}">
+    <button type="submit" class="btn btn-primary">Submit</button>
+    </a>
+  </form>
+  <br><br>
+  <a href="{% url 'home' %}">
+    <button type="Cancel" class="btn btn-primary">Cancel</button>
+  </a>
+
+{% endblock content %}

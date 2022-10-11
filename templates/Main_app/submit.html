@@ -1,0 +1,22 @@
+{% extends 'core/base.html' %}
+{% block title %}Submit{% endblock title %}
+{% block content %} 
+<hr style="border:solid">
+{% for cipher in ciphers %}
+<div style="text-align:center; border-style: double;" >
+  <br>  
+<h4 >
+    Plain Text: {{cipher.Plaintext}}
+</h4> 
+    <hr>   
+    <br>
+<center>
+    <a href="{% url 'process' id=cipher.id %}">
+    <button  class="btn btn-primary">process</button>
+    </a>
+    </center>
+</div>  
+{% endfor %}
+
+<hr style="color:black">
+{% endblock content %}
